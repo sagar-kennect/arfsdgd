@@ -1,0 +1,98 @@
+//  POST /doctors - creates a new doctor   
+Body Object Example   
+
+{
+  "admin":false,
+  "name": "Shrikant Shindhe ",
+  "email": "shree@gmail.com",
+  "phone": "8805909627",
+  "specialty": "Neurology"
+}
+
+
+
+//  PUT /doctors/:id - updates an existing doctor  
+Body Object Example  
+
+{
+  "admin":false,
+  "name": "Shrikant Shindhe ",
+  "email": "new-shree@gmail.com",
+  "phone": "8805909627",
+  "specialty": "Neurology"
+}
+
+Note: Only Admin Can Do 
+
+
+
+//  GET /doctors - returns a list of all doctors  
+
+return array of object contains doctor details
+
+
+// GET /clinics - returns a list of all clinics
+
+return array of object contains All clinic details
+
+
+// GET /clinics/search?query=[query] - returns a list of clinics matching the search query
+
+Its return result according to query string
+
+
+
+// POST /clinics - creates a new clinic   ---done
+
+Body Object Example  
+
+{
+  "name": "Nobel Hospital",
+  "address": "Powai, Mumbai" ,
+  "phone": "8888662244",
+  "owner": "644cc225e74e26c81440dae4", // Owner Doctor ID 
+  "helper": "644cc41b08e0f575eac5af9b", // Helper Doctor ID 
+  "doctors": ["644cc45d08e0f575eac5af9d","644cc41b08e0f575eac5af9b"]  //  array of doctors iD 
+}
+
+
+// PUT /clinics/:id - updates an existing clinic
+
+
+// GET /appointments - returns a list of all appointments
+
+
+
+// POST /appointments - creates a new appointment
+
+Body Object Example  
+
+{
+   "doctor": "644cc225e74e26c81440dae4",
+  "patient_name": "Sagar Borude",
+  "patient_email": "sagar.html5@gmail.com",
+  "patient_phone": "8805189617",
+  "clinic": "644cd1ae3b22795564c57e86",
+  "appointment_time": "1682764808401",
+  "status": "Booked"
+}
+
+
+
+// PUT /appointments/:id - updates an existing appointment
+
+
+Example
+
+/appointment/status-change/644d00e0e98ef4d1a061a326 
+
+if appointment status is Booked then after calling this api status will be Confirm 
+
+if appointment status is Confirm then after calling this api status will be Cancel 
+
+(api for toggle button in frontend )
+
+
+
+
+
